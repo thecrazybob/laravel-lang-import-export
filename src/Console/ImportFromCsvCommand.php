@@ -1,13 +1,14 @@
 <?php
 
-namespace UFirst\LangImportExport\Console;
+namespace HighSolutions\LangImportExport\Console;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
-use \UFirst\LangImportExport\Facades\LangListService;
+use HighSolutions\LangImportExport\Facades\LangListService;
 
-class ImportFromCsvCommand extends Command {
+class ImportFromCsvCommand extends Command 
+{
 
 	/**
 	 * The console command name.
@@ -84,4 +85,5 @@ class ImportFromCsvCommand extends Command {
 		fclose($input_fp);
 		LangListService::writeLangList($locale, $group, $strings);
 	}
+	
 }
